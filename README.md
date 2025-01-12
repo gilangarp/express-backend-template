@@ -1,40 +1,50 @@
-# Setup Proyek
+# Setup Project
 
-Ikuti langkah-langkah berikut untuk menyiapkan proyek ini:
+Ikuti langkah-langkah berikut untuk menyiapkan project ini:
 
-## 1. Clone Repositori
+## 1. Clone Repository
 
-Clone repositori ke dalam folder lokal Anda dan ubah nama folder sesuai dengan proyek Anda:
+Clone repository ke dalam folder lokal Anda:
 
 ```bash
 git clone https://github.com/gilangarp/express-backend-template.git
 ```
 
-Ganti nama folder proyek dengan nama yang sesuai:
+## 2. Ganti Nama Folder Project
+
+Ganti nama folder project dengan nama yang sesuai menggunakan perintah berikut:
+
+- Di **Windows** (menggunakan PowerShell):
+
+  ```bash
+  Move-Item -Path "express-backend-template" -Destination "nama-project-anda"
+  ```
+
+- Di **Linux/macOS**:
+
+  ```bash
+  mv express-backend-template nama-project-anda
+  ```
+
+## 3. Masuk ke Folder Project
+
+Masuk ke dalam folder project yang sudah Anda clone:
 
 ```bash
-mv express-backend-template nama-proyek-anda
+cd nama-project-anda
 ```
 
-## 2. Masuk ke Folder Proyek
+## 4. Hapus Folder `.git`
 
-Masuk ke dalam folder proyek yang sudah Anda clone:
+Hapus folder `.git` untuk memulai repository baru (untuk menghindari konflik dengan repository sebelumnya).
 
-```bash
-cd nama-proyek-anda
-```
-
-## 3. Hapus Folder `.git`
-
-Hapus folder `.git` untuk memulai repositori baru (untuk menghindari konflik dengan repositori sebelumnya).
-
-- Di **Linux/macOS**, jalankan perintah berikut:
+- Di **Linux/macOS**:
 
   ```bash
   rm -rf .git
   ```
 
-- Di **Windows**, jalankan perintah berikut di PowerShell:
+- Di **Windows** (menggunakan PowerShell):
 
   ```bash
   Remove-Item -Recurse -Force .git
@@ -42,51 +52,51 @@ Hapus folder `.git` untuk memulai repositori baru (untuk menghindari konflik den
 
 - Atau, Anda bisa menghapus folder `.git` secara manual.
 
-## 4. Hapus File `README.md`
+## 5. Hapus File `README.md`
 
-Hapus file `README.md` yang ada karena mungkin Anda ingin menggantinya dengan dokumentasi sesuai proyek Anda.
+Hapus file `README.md` yang ada karena mungkin Anda ingin menggantinya dengan dokumentasi sesuai project Anda.
 
-- Di **Linux/macOS**, jalankan perintah berikut:
+- Di **Linux/macOS**:
 
   ```bash
   rm README.md
   ```
 
-- Di **Windows**, jalankan perintah berikut di PowerShell:
+- Di **Windows** (menggunakan PowerShell):
 
   ```bash
   Remove-Item README.md
   ```
 
-## 5. Install Dependencies
+## 6. Install Dependencies
 
-Jalankan perintah berikut untuk menginstall dependensi:
+Jalankan perintah berikut untuk menginstall dependencies:
 
 ```bash
 npm install
 ```
 
-atau
+atau jika menggunakan **Yarn**:
 
 ```bash
 yarn install
 ```
 
-## 6. Buat File `.env`
+## 7. Buat File `.env`
 
-Buat file `.env` di root folder proyek dan tentukan port yang diinginkan (default adalah 3000):
+Buat file `.env` di root folder project dan tentukan port yang diinginkan (default adalah 3000):
 
 ```env
 PORT=3000
 ```
 
-## 7. Ubah Port (Opsional)
+## 8. Ubah Port (Opsional)
 
 Jika ingin mengubah port, buka folder `src/config`, kemudian pilih file `serverConfig.js`. Sesuaikan port dengan nilai yang ada di `.env`.
 
-## 8. Jalankan Proyek
+## 9. Jalankan Project
 
-Untuk menjalankan proyek, gunakan perintah berikut:
+Untuk menjalankan project, gunakan perintah berikut:
 
 - Jika menggunakan **npm**:
 
@@ -94,7 +104,7 @@ Untuk menjalankan proyek, gunakan perintah berikut:
   npm run dev
   ```
 
-- Jika menggunakan **yarn**:
+- Jika menggunakan **Yarn**:
 
   ```bash
   yarn dev
